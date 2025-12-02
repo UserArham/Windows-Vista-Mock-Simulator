@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vista Simulator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="desktop">
+  <img id="wallpaper" src="https://i.imgur.com/7E0Tn4o.jpeg">
+</div>
+
+<div id="taskbar">
+  <div id="start-button">Start</div>
+  <div id="taskbar-windows"></div>
+  <div id="clock"></div>
+</div>
+
+<div id="start-menu" class="hidden">
+  <div class="start-left">
+    <h2>VistaSim</h2>
+    <ul>
+      <li onclick="openApp('apps/notepad.html','Notepad')">Notepad</li>
+      <li onclick="openApp('apps/explorer.html','File Explorer')">File Explorer</li>
+      <li onclick="openApp('apps/about.html','About')">About VistaSim</li>
+    </ul>
+  </div>
+  <div class="start-right"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
