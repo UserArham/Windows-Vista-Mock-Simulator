@@ -1,0 +1,2 @@
+// Save as assets/sounds/click.mp3
+const clickBase64 = "data:audio/mp3;base64,//UklGRiQAAABXQVZFZm10IBAAAAABAAEA...";
