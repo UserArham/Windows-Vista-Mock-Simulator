@@ -72,3 +72,62 @@ function openApp(url, title) {
     }
   };
 }
+function makeIconsDraggable() {
+  document.querySelectorAll(".icon").forEach(icon => {
+    let drag = false, ox=0, oy=0;
+
+    icon.onmousedown = e => {
+      drag = true;
+      ox = e.offsetX;
+      oy = e.offsetY;
+    };
+
+    document.onmouseup = () => drag = false;
+    document.onmousemove = e => {
+      if(!drag) return;
+      icon.style.left = (e.clientX - ox) + "px";
+      icon.style.top  = (e.clientY - oy) + "px";
+    };
+  });
+}
+
+window.onload = makeIconsDraggable;
+function makeIconsDraggable() {
+  document.querySelectorAll(".icon").forEach(icon => {
+    let drag = false, ox=0, oy=0;
+
+    icon.onmousedown = e => {
+      drag = true;
+      ox = e.offsetX;
+      oy = e.offsetY;
+    };
+
+    document.onmouseup = () => drag = false;
+    document.onmousemove = e => {
+      if(!drag) return;
+      icon.style.left = (e.clientX - ox) + "px";
+      icon.style.top  = (e.clientY - oy) + "px";
+    };
+  });
+}
+
+window.onload = makeIconsDraggable;
+function makeIconsDraggable() {
+  document.querySelectorAll(".icon").forEach(icon => {
+    let drag = false, ox=0, oy=0;
+
+    icon.onmousedown = e => {
+      drag = true;
+      ox = e.offsetX;
+      oy = e.offsetY;
+    };
+
+    document.onmouseup = () => drag = false;
+    document.onmousemove = e => {
+      if(!drag) return;
+      icon.style.left = (e.clientX - ox) + "px";
+      icon.style.top  = (e.clientY - oy) + "px";
+    };
+  });
+}
+
