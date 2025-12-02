@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin:0; background:#1b1b1b;
+  color:white; font-family:Segoe UI;
+  display:flex; justify-content:center; align-items:center;
+  height:100vh;
+}
+#box {
+  background:rgba(255,255,255,0.1);
+  backdrop-filter:blur(10px);
+  padding:30px; border-radius:10px; width:260px;
+  text-align:center;
+}
+input {
+  width:100%; padding:10px; margin:10px 0;
+  border:none; border-radius:6px; font-size:16px;
+}
+button {
+  width:100%; padding:10px; border:none;
+  background:#4ca3ff; border-radius:6px; cursor:pointer;
+  font-size:16px; font-weight:bold;
+}
+button:hover { background:#66b7ff; }
+</style>
+</head>
+
+<body>
+<div id="box">
+  <h2>VistaSim Login</h2>
+  <input id="user" placeholder="Username">
+  <input id="pass" type="password" placeholder="Password">
+  <button onclick="login()">Login</button>
+</div>
+
+<script>
+if(!localStorage.getItem("vista_users")){
+  localStorage.setItem("vista_users", JSON.stringify({admin:"1234"}));
+}
+
+function login(){
+  let users = JSON.parse(localStorage.getItem("vista_users"));
+  let u = user.value.trim();
+  let p = pass.value.trim();
+  if(users[u] === p){
+    location = "boot.html";
+  } else {
+    alert("Incorrect login");
+  }
+}
+</script>
+</body>
+</html>
