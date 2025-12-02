@@ -1,0 +1,124 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Segoe UI, sans-serif;
+}
+#desktop {
+  width: 100vw;
+  height: 100vh;
+}
+#wallpaper {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(30,30,30,0.55);
+  backdrop-filter: blur(12px);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 9999;
+}
+#start-button {
+  margin-left: 10px;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.25);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background .2s;
+}
+#start-button:hover {
+  background: rgba(255,255,255,0.4);
+}
+#taskbar-windows {
+  display: flex;
+  gap: 6px;
+  flex-grow: 1;
+  margin-left: 10px;
+}
+.taskbar-item {
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  cursor: pointer;
+}
+#start-menu {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  width: 320px;
+  height: 420px;
+  background: rgba(30,30,30,0.85);
+  backdrop-filter: blur(12px);
+  color: white;
+  border-radius: 6px;
+  padding: 10px;
+  animation: popup .18s ease-out;
+  z-index: 9999;
+}
+@keyframes popup {
+  from {transform: translateY(25px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+.hidden { display: none; }
+
+.window {
+  position: absolute;
+  background: rgba(255,255,255,0.92);
+  backdrop-filter: blur(4px);
+  width: 550px;
+  height: 380px;
+  border-radius: 8px;
+  box-shadow: 0 7px 20px rgba(0,0,0,0.45);
+  animation: fadewin .2s ease-out;
+}
+@keyframes fadewin {
+  from {opacity: 0; transform: scale(.96);}
+  to {opacity: 1; transform: scale(1);}
+}
+.titlebar {
+  background: linear-gradient(to bottom,#4b8ad8,#2c5ea4);
+  color: white;
+  padding: 6px;
+  cursor: grab;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+.close-btn {
+  width: 22px;
+  height: 22px;
+  background: #d44;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 22px;
+  cursor: pointer;
+}
+iframe {
+  border: none;
+}
+.gadget {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  right: 20px;
+  border: none;
+  background: rgba(255,255,255,0.3);
+  backdrop-filter: blur(6px);
+  border-radius: 10px;
+}
+.gadget-note {
+  top: 200px;
+  width: 200px;
+  height: 160px;
+}
