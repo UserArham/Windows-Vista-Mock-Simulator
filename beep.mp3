@@ -1,0 +1,2 @@
+// Save as assets/sounds/error.mp3
+const errorBase64 = "data:audio/mp3;base64,//UklGRiQAAABXQVZFZm10IBAAAAABAAEA...";
