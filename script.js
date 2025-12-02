@@ -1,3 +1,7 @@
+function shutdown(){
+  snd.click.play();
+  location = "shutdown.html";
+}
 snd.click.play();
 const snd = {
   click: new Audio("assets/sounds/click.mp3"),
