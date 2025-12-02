@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body style="margin:0;font-family:Segoe UI;">
+<div id="messages" style="height:300px;overflow-y:auto;border-bottom:1px solid #aaa;padding:6px;"></div>
+
+<input id="msg" style="width:80%;padding:6px;">
+<button onclick="send()">Send</button>
+
+<script>
+let box=document.getElementById("messages");
+let input=document.getElementById("msg");
+
+function load(){
+  let m=JSON.parse(localStorage.getItem("vista_chat")||"[]");
+  box.innerHTML = m.map(x=>"<div>"+x+"</div>").join("");
+  box.scrollTop=box.scrollHeight;
+}
+function save(list){
+  localStorage.setItem("vista_chat",JSON.stringify(list));
+}
+function send(){
+  if(!input.value.trim())return;
+  let m=JSON.parse(localStorage.getItem("vista_chat")||"[]");
+  m.push("You: "+input.value.trim());
+  save(m);
+  input.value="";
+  load();
+}
+load();
+</script>
+</body>
+</html>
