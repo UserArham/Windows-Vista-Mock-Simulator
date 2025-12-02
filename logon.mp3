@@ -1,0 +1,2 @@
+// Save as assets/sounds/logon.mp3
+const logonBase64 = "data:audio/mp3;base64,//UklGRiQAAABXQVZFZm10IBAAAAABAAEA...";
