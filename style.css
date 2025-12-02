@@ -1,3 +1,69 @@
+/* AERO GLASS EFFECT */
+.window {
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: blur(12px) saturate(170%);
+  border: 1px solid rgba(255,255,255,0.45);
+  border-radius: 7px;
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+}
+
+/* Vista-style titlebar */
+.titlebar {
+  background: linear-gradient(to bottom, rgba(255,255,255,0.65), rgba(255,255,255,0.15));
+  color: #0e355d;
+  padding: 6px;
+  font-weight: bold;
+  text-shadow: 0 0 5px white;
+  border-radius: 6px 6px 0 0;
+  user-select: none;
+}
+
+/* Vista minimize/close buttons */
+.win-btn {
+  width: 22px;
+  height: 22px;
+  margin-left: 6px;
+  float: right;
+  border-radius: 4px;
+  cursor: pointer;
+  background: rgba(255,255,255,0.5);
+  border: 1px solid rgba(255,255,255,0.3);
+}
+
+.win-btn:hover {
+  background: rgba(255,255,255,0.8);
+}
+
+/* Start Menu Glass */
+#start-menu {
+  background: rgba(255,255,255,0.33);
+  backdrop-filter: blur(14px);
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.4);
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+/* Taskbar Vista style */
+#taskbar {
+  background: linear-gradient(to top, #1f1f1f, #2c2c2c);
+  border-top: 2px solid #3f3f3f;
+  height: 42px;
+}
+
+#start-button {
+  background: linear-gradient(to bottom, #6abd47, #4c8f2f);
+  border-radius: 5px;
+  padding: 5px 12px;
+  color: white;
+  text-shadow: 0 0 4px black;
+  margin-left: 6px;
+  cursor: pointer;
+  box-shadow: 0 0 5px rgba(0,0,0,0.6);
+}
+
+#start-button:hover {
+  filter: brightness(1.15);
+}
 .icon {
   position:absolute;
   width:70px;
