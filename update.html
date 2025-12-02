@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body style="margin:0;">
+<div id="tabs" style="display:flex;gap:6px;padding:6px;background:#ddd;"></div>
+
+<div style="padding:6px;">
+  <input id="url" style="width:70%;" placeholder="https://example.com">
+  <button onclick="newTab()">New Tab</button>
+  <button onclick="go()">Go</button>
+</div>
+
+<iframe id="view" style="width:100%;height:260px;border:none;"></iframe>
+
+<script>
+let tabList = [];
+let current = -1;
+
+function renderTabs(){
+  let t=document.getElementById("tabs");
+  t.innerHTML="";
+  tabList.forEach((tab,i)=>{
+    let b=document.createElement("button");
+    b.innerText = tab.title;
+    b.onclick=()=>switchTab(i);
+    t.appendChild(b);
+  });
+}
+
+function newTab(){
+  tabList.push({url:"", title:"Tab "+(tabList.length+1)});
+  current = tabList.length - 1;
+  renderTabs();
+}
+
+function switchTab(i){
+  current=i;
+  url.value = tabList[i].url;
+  document.getElementById("view").src = tabList[i].url;
+}
+
+function go(){
+  if(current < 0) newTab();
+  let u = url.value;
+  if(!u.startsWith("http")) u = "https://" + u;
+
+  tabList[current].url = u;
+  tabList[current].title = "Tab " + (current+1);
+  document.getElementById("view").src = u;
+  renderTabs();
+}
+</script>
+</body>
+</html>
