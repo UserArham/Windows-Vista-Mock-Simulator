@@ -1,0 +1,2 @@
+// Save as assets/sounds/shutdown.mp3
+const shutdownBase64 = "data:audio/mp3;base64,//UklGRiQAAABXQVZFZm10IBAAAAABAAEA...";
