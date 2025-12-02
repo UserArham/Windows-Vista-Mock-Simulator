@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body style="margin:0;">
+<canvas id="c" width="500" height="340" style="border:1px solid #999;"></canvas>
+
+<script>
+let c=document.getElementById("c");
+let x=c.getContext("2d");
+let draw=false;
+
+c.onmousedown=()=>draw=true;
+c.onmouseup=()=>draw=false;
+
+c.onmousemove=e=>{
+  if(!draw)return;
+  let r=c.getBoundingClientRect();
+  x.fillRect(e.clientX-r.left, e.clientY-r.top, 3, 3);
+};
+</script>
+</body>
+</html>
