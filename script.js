@@ -1,3 +1,8 @@
+const snd = {
+  click: new Audio("assets/sounds/click.mp3"),
+  startup: new Audio("assets/sounds/startup.mp3"),
+  error: new Audio("assets/sounds/error.mp3")
+};
 // START BUTTON
 const startBtn = document.getElementById("start-button");
 const startMenu = document.getElementById("start-menu");
