@@ -1,0 +1,8 @@
+Add Terminal application
+Add Chat application with local message storage
+Add boot-up animation (boot.html)
+Add desktop icons with launch support
+Add terminal and chat icons
+Update index.html to include desktop icons
+Update style.css for icon layout and interaction
+VistaSim OS extended build
