@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  margin:0; 
+  background:black;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:white;
+  font-family:Segoe UI;
+  animation:fadein 1.5s;
+}
+
+#wrap {
+  text-align:center;
+  opacity:0;
+  animation:appear 2s forwards;
+}
+
+#circle {
+  width:60px;
+  height:60px;
+  border:6px solid #2e2e2e;
+  border-top:6px solid #4ca3ff;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+  margin:auto;
+}
+
+@keyframes spin {
+  100% {transform:rotate(360deg);}
+}
+
+@keyframes appear {
+  to {opacity:1;}
+}
+
+@keyframes fadein {
+  from {opacity:0;}
+  to {opacity:1;}
+}
+</style>
+</head>
+
+<body>
+<div id="wrap">
+  <div id="circle"></div>
+  <h2>Shutting down…</h2>
+</div>
+
+<script>
+setTimeout(()=>{ location = "login.html"; }, 4000);
+</script>
+</body>
+</html>
