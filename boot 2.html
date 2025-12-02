@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background:black; color:white; margin:0;
+  display:flex; justify-content:center; align-items:center;
+  height:100vh; font-family:Segoe UI;
+}
+#logo {
+  font-size:48px; opacity:0; animation:fadeIn 2s forwards;
+}
+@keyframes fadeIn { to {opacity:1;} }
+.spinner {
+  margin-top:20px;
+  width:60px; height:60px;
+  border:6px solid #333;
+  border-top:6px solid #4ca3ff;
+  border-radius:50%;
+  animation:spin 1s linear infinite;
+}
+@keyframes spin { 100% {transform:rotate(360deg);} }
+</style>
+</head>
+<body>
+<div>
+  <div id="logo">VistaSim OS</div>
+  <div class="spinner"></div>
+</div>
+<script>
+snd?.startup?.play?.();
+setTimeout(()=>location="index.html", 3000);
+</script>
+</body>
+</html>
