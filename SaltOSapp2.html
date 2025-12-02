@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>File Explorer</h2>
+
+<input id="filename" placeholder="filename.txt">
+<button onclick="create()">Create</button>
+<button onclick="del()">Delete</button>
+
+<ul id="files"></ul>
+
+<script>
+function refresh() {
+  let list = fs.list();
+  let ul = document.getElementById("files");
+  ul.innerHTML = "";
+  list.forEach(f=>{
+    let li=document.createElement("li");
+    li.innerText=f;
+    li.onclick=()=>openFile(f);
+    ul.appendChild(li);
+  });
+}
+function create(){
+  let f=document.getElementById("filename").value;
+  fs.create(f,"");
+  refresh();
+}
+function del(){
+  let f=document.getElementById("filename").value;
+  fs.delete(f);
+  refresh();
+}
+function openFile(name){
+  let data=fs.read(name);
+  let w=window.open("","_blank");
+  w.document.write(`<textarea style='width:100%;height:100%'>${data}</textarea>`);
+}
+refresh();
+</script>
+</body>
+</html>
