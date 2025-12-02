@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<body style="background:black;color:#0f0;font-family:consolas;margin:0;padding:10px;">
+<div id="out"></div>
+<input id="in" autofocus style="width:100%;background:black;color:#0f0;border:none;outline:none;font-family:consolas;font-size:16px;">
+
+<script>
+let o = document.getElementById("out");
+let i = document.getElementById("in");
+
+function print(t){ o.innerHTML += t + "<br>"; }
+
+print("VistaSim Terminal");
+print("Type 'help' for commands.");
+
+i.onkeydown = e=>{
+  if(e.key==="Enter"){
+    let cmd=i.value.trim();
+    print("> " + cmd);
+    run(cmd);
+    i.value="";
+  }
+};
+
+function run(cmd){
+  let p=cmd.split(" ");
+  let c=p[0];
+  let arg=p[1];
+
+  switch(c){
+    case "help":
+      print("Commands: help, ls, cat <file>, write <file>, del <file>, clear");
+      break;
+    case "ls":
+      print(JSON.stringify(fs.list()));
+      break;
+    case "cat":
+      print(fs.read(arg));
+      break;
+    case "write":
+      fs.write(arg, prompt("Content:") || "");
+      print("Saved.");
+      break;
+    case "del":
+      fs.delete(arg);
+      print("Deleted.");
+      break;
+    case "clear":
+      o.innerHTML="";
+      break;
+    default:
+      print("Unknown command");
+  }
+}
+</script>
+</body>
+</html>
