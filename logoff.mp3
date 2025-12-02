@@ -1,0 +1,2 @@
+// Save as assets/sounds/logoff.mp3
+const logoffBase64 = "data:audio/mp3;base64,//UklGRiQAAABXQVZFZm10IBAAAAABAAEA...";
