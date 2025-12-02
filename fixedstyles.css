@@ -1,0 +1,117 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  font-family: Segoe UI, sans-serif;
+}
+
+#desktop {
+  width: 100vw;
+  height: 100vh;
+}
+
+#wallpaper {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 40px;
+  background: rgba(30,30,30,0.6);
+  backdrop-filter: blur(12px);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#start-button {
+  margin-left: 10px;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+#start-button:hover {
+  background: rgba(255,255,255,0.35);
+}
+
+.window {
+  position: absolute;
+  background: rgba(255,255,255,0.95);
+  backdrop-filter: blur(6px);
+  width: 550px;
+  height: 380px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  animation: fadein 0.2s ease-out;
+}
+
+@keyframes fadein {
+  from {opacity: 0; transform: scale(0.96);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+.titlebar {
+  background: linear-gradient(to bottom, #4c8eda, #285ea8);
+  color: white;
+  padding: 6px;
+  cursor: grab;
+  border-radius: 8px 8px 0 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+
+.close-btn {
+  width: 22px;
+  height: 22px;
+  background: #d84a4a;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 22px;
+  cursor: pointer;
+}
+
+.gadget {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  border: none;
+  right: 20px;
+  top: 20px;
+  backdrop-filter: blur(6px);
+}
+
+.gadget-note {
+  top: 200px;
+  width: 200px;
+  height: 160px;
+}
+
+#start-menu {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  width: 320px;
+  height: 420px;
+  background: rgba(40,40,40,0.85);
+  backdrop-filter: blur(12px);
+  border-radius: 8px;
+  animation: menuPop 0.15s ease-out;
+}
+
+@keyframes menuPop {
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+
+.hidden {
+  display: none;
+}
