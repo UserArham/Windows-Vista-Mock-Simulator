@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VistaSim OS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="desktop">
+  <img id="wallpaper" src="https://i.imgur.com/7E0Tn4o.jpeg">
+</div>
+
+<!-- Gadgets -->
+<iframe class="gadget" src="gadgets/clock.html"></iframe>
+<iframe class="gadget gadget-note" src="gadgets/notes.html"></iframe>
+
+<!-- Taskbar -->
+<div id="taskbar">
+  <div id="start-button"><span>Start</span></div>
+  <div id="taskbar-windows"></div>
+  <div id="clock"></div>
+</div>
+
+<!-- Start Menu -->
+<div id="start-menu" class="hidden">
+  <div class="start-left">
+    <h2>VistaSim</h2>
+    <ul>
+      <li onclick="openApp('apps/notepad.html','Notepad')">Notepad</li>
+      <li onclick="openApp('apps/explorer.html','File Explorer')">File Explorer</li>
+      <li onclick="openApp('apps/calculator.html','Calculator')">Calculator</li>
+      <li onclick="openApp('apps/media.html','Media Player')">Media Player</li>
+      <li onclick="openApp('apps/about.html','About VistaSim')">About</li>
+    </ul>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
