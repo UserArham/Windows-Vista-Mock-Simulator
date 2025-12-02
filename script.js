@@ -1,3 +1,4 @@
+snd.click.play();
 const snd = {
   click: new Audio("assets/sounds/click.mp3"),
   startup: new Audio("assets/sounds/startup.mp3"),
