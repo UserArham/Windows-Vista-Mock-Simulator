@@ -1,0 +1,2 @@
+// Save as assets/sounds/notify.mp3
+const notifyBase64 = "data:audio/mp3;base64,//UklGRiQAAABXQVZFZm10IBAAAAABAAEA...";
