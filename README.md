@@ -1,1 +1,1 @@
-As of today, the Vista Simulator will be highly set to a virtual machine with Vercel VM, 2 GB RAM. I will spacerocket it and out number it until this repostiory is highlighted, while it uses 480-800+ MB, possibly wasting the vRAM (Vercel RAM) which got 1.90 GB. The Blob Data Storage is 955 MB of storage. Transfer is 8.9 GB. This will be discontinued today; thanks.
+We are sorry but today if you can not access GitHub.io, we might stop making commits.
